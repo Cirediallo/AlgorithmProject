@@ -26,3 +26,5 @@ else:
 LSA_results = LSA.run(D, M)
 LPT_results = LPT.run(D, M)
 RMA_results = RMA.run(D, M)
+
+print(f'T_lsa = {LSA_results}')
