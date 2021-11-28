@@ -28,3 +28,4 @@ LPT_results = LPT.run(D, M)
 RMA_results = RMA.run(D, M)
 
 print(f'T_lsa = {LSA_results}')
+print(f'T_lpt = {LPT_results}')
