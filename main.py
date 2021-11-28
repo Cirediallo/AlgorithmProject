@@ -23,10 +23,21 @@ else:
     print("Invalid input mode")
     sys.exit()
 
-LSA_results = LSA.run(D, M)
-LPT_results = LPT.run(D, M)
-RMA_results = RMA.run(D, M)
+LSA_result = LSA.run(D, M)
+LPT_result = LPT.run(D, M)
+RMA_result = RMA.run(D, M)
 
-print(f'T_lsa = {LSA_results}')
-print(f'T_lpt = {LPT_results}')
-print(f'T_rma = {RMA_results}')
+borne_inferieure_moyenne = sum(D) / len(M)
+borne_inferieure_maximum = max(D)
+
+B = max(borne_inferieure_moyenne, borne_inferieure_maximum)
+
+print(f'Borne inferieure "maximum" = {borne_inferieure_maximum}')
+print(f'Borne inferieure "moyenne" = {borne_inferieure_moyenne}')
+
+print(f'Resultat LSA = {LSA_result}')
+print(f'ratio LSA = {(LSA_result / B):.2f}\n')
+print(f'Resultat LPT = {LPT_result}')
+print(f'ratio LPT = {(LPT_result / B):.2f}\n')
+print(f'Resultat RMA = {RMA_result}')
+print(f'ratio RMA = {(RMA_result / B):.2f}\n')
