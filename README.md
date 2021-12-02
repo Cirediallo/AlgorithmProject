@@ -10,7 +10,7 @@
 # Selon l'environnement
 python3 main.py # puis entrer les différents paramètres demandés par le programme
 
-# Si la version de python3 est appelé avec python:
+# Si la version de python3 est appelée avec python:
 python main.py # puis entrer les différents paramètres demandés par le programme
 ```
 
@@ -22,7 +22,7 @@ Créer un sous dossier `results`
 # Selon l'environnement
 python3 test.py
 
-# Si la version de python3 est appelé avec python:
+# Si la version de python3 est appelée avec python:
 python test.py
 ```
 
