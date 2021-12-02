@@ -5,14 +5,15 @@ import algorithms.RMA as RMA
 import random
 from statistics import mean
 
-input_mode = int(input("Choose an input mode:\n1 - Ip\n2 - Ir\n\n"))
+input_mode = int(input(
+    "Choisissez un mode de génération d'instance:\n1 - Mode Ip\n2 - Mode Ir\n\n"))
 
 D = []
 M = []
 
 # Ip input mode
 if input_mode == 1:
-    p = int(input("Enter a value for p: "))
+    p = int(input("Entrez la valeur du paramètre p: "))
 
     D = [1 for i in range(4 * p)] + \
         [2 for i in range(2 * p * (p - 1))] + [2 * p]
@@ -30,24 +31,24 @@ if input_mode == 1:
     #print(f'M: {M}\n')
     B = max(borne_inferieure_moyenne, borne_inferieure_maximum)
 
-    print(f'Borne inferieure "maximum" = {borne_inferieure_maximum}')
-    print(f'Borne inferieure "moyenne" = {borne_inferieure_moyenne}')
+    print(f'Borne inférieure "maximum" = {borne_inferieure_maximum}')
+    print(f'Borne inférieure "moyenne" = {borne_inferieure_moyenne}\n')
     #print(f'B = {B}\n')
 
-    print(f'Resultat LSA = {LSA_result}')
+    print(f'Résultat LSA = {LSA_result}')
     print(f'ratio LSA = {(LSA_result / B):.2f}\n')
-    print(f'Resultat LPT = {LPT_result}')
+    print(f'Résultat LPT = {LPT_result}')
     print(f'ratio LPT = {(LPT_result / B):.2f}\n')
-    print(f'Resultat RMA = {RMA_result}')
+    print(f'Résultat RMA = {RMA_result}')
     print(f'ratio RMA = {(RMA_result / B):.2f}\n')
 
 
 elif input_mode == 2:
-    m = int(input("Enter a value for m: "))
-    n = int(input("Enter a value for n: "))
-    k = int(input("Enter a value for k: "))
-    d_min = int(input("Enter a value for d_min: "))
-    d_max = int(input("Enter a value for d_max: "))
+    m = int(input("Entrez la valeur du paramètre m: "))
+    n = int(input("Entrez la valeur du paramètre n: "))
+    k = int(input("Entrez la valeur du paramètre k: "))
+    d_min = int(input("Entrez la valeur du paramètre d_min: "))
+    d_max = int(input("Entrez la valeur du paramètre d_max: "))
 
     LSA_mean_ratio = []
     LPT_mean_ratio = []
